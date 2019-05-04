@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="main.css">
+<head>
+	<title>Temperature Converter</title>
+</head>
+<body>
+	<div class="container">
+  		<div class="row">
+  			<div class = "col-md-8 offset-md-2">
+				<h1 class = "display-4 text-center mb-2">Temperature Converter</h1>
+  			</div>	
+  			<div class = "col-md-6 offset-md-3">
+				<form>
+					<div class = "form-group">
+						<input type="number" class="form-control form-control-lg" placeholder = "Enter Celcius" id = "celcInput">
+					</div>
+					<div id = "output">
+						<div class = "card bg-primary mb-2">
+							<div class = "class-body">
+								<h4>Fahrenheit</h4>
+								<div id = "fahrenheitOutput"></div>
+							</div>
+						</div>
+
+						<div class = "card bg-success mb-2">
+							<div class = "class-body">
+								<h4>Kelvin</h4>
+								<div id = "kelvinOutput"></div>
+							</div>
+						</div>
+					</div>
+				</form>
+  			</div>
+  		</div>
+	</div>
+
+	<script type="text/javascript" src = "app.js"></script>
+	<script type="text/javascript">
+		window.addEventListener('keydown',(e)=>{
+			if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13)
+				{if(e.target.nodeName=='INPUT'&&e.target.type=='number')
+					{e.preventDefault();return false;}
+				}
+			},true);
+	</script>
+</body>
+</html>
